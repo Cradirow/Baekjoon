@@ -12,30 +12,24 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     int T;
     cin >> T;
-    unsigned int M,N,x,y;
-    for(int i=0; i<T; i++){
+    int M, N, x, y;
+    for(int test_cast = 0; test_cast < T; test_cast++){
+        int k, gap;
         cin >> M >> N >> x >> y;
-        int m = 1, n = 1;
-        int count = 0;
-        bool isFound = false;
-        while(!isFound){
-            if(m == x && n == y){
-                isFound = true;
-            }else if(m == M && n == N){
-                break;
-            }else{
-                if(m == M) m = 0;
-                if(n == N) n = 0;
-                m++;
-                n++;
-                count++;
-            }
-        }
-        if(isFound){
-            cout << count+1 << endl;
+        if(x == y){
+            cout << x << endl;
         }else{
-            cout << -1 << endl;
+            int min = 0;
+            if(x > y) min = y;
+            else min = x;
+            k = min;
+            gap = abs(M - N);
+            for(int i = 1; i < N/gap; i++){
+                if(y == (N + min - gap * i) % N){
+                    k += M * i;
+                }
+            }
+            cout << k << endl;
         }
     }
-    return 0;
 }
