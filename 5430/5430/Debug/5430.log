@@ -1,4 +1,0 @@
-﻿  main.cpp
-c:\users\user\source\repos\5430\5430\main.cpp(33): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\user\source\repos\5430\5430\main.cpp(67): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  5430.vcxproj -> C:\Users\user\source\repos\5430\Debug\5430.exe
